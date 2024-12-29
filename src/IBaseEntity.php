@@ -8,4 +8,9 @@ namespace bg13\entites;
  */
 interface IBaseEntity {
     
+    /**
+     * @return string The display name of the entity object
+     */
+    function getDisplayName() : string;
+    
 }
