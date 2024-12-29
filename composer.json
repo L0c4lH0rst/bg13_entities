@@ -1,0 +1,15 @@
+{
+	"name" : "bg13/entities",
+	"description" : "Entity management, based on repositories and services",
+	"type" : "library",
+	"autoload" : {
+		"psr-4" : {
+			"bg13\\Entities\\" : "src/"
+		}
+	},
+	"authors" : [{
+			"name" : "bg13"
+		}
+	],
+	"minimum-stability" : "dev"
+}
