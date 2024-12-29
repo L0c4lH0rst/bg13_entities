@@ -1,5 +1,5 @@
 <?php
-namespace bg13\entites;
+namespace bg13\entities;
 
 
 /**
