@@ -4,12 +4,11 @@
 	"type" : "library",
 	"autoload" : {
 		"psr-4" : {
-			"bg13\\Entities\\" : "src/"
+			"bg13\\entities\\" : "src/"
 		}
 	},
 	"authors" : [{
 			"name" : "bg13"
 		}
 	]
-
 }

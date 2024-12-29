@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'bg13\\Entities\\' => array($baseDir . '/src'),
+    'bg13\\entities\\' => array($baseDir . '/src'),
 );
