@@ -1,5 +1,5 @@
 <?php
-namespace bg13\entities;
+namespace bg13\entities\models;
 
 use \TypeError;
 
@@ -21,7 +21,7 @@ trait TBaseEntity {
     
     /**
     * {@inheritDoc}
-    * @see \bg13\entities\IBaseEntity::getEntityClassNamePath()
+    * @see \bg13\entities\models\IBaseEntity::getEntityClassNamePath()
     */
     public function getEntityClassNamePath(bool $withPath=true) : string {
         $cn = $this->getEntityClassName();
