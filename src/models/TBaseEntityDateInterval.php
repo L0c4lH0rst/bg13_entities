@@ -4,8 +4,6 @@ namespace bg13\entities\models;
 
 use bg13\entities\components\TDates;
 
-use bg13\entities\TBaseEntity;
-
 
 /**
  * Default implementation of IDateInterval and IBaseEntity (because it includes
@@ -97,6 +95,26 @@ trait TBaseEntityDateInterval {
      */
     public function containsInterval(IDateInterval $interval) : bool {
         return $this->intervalContainsInterval($this, $interval);
+    }
+    
+    
+    /**
+     * {@inheritDoc}
+     * @see \bg13\entities\models\IDateInterval::toIntervalString()
+     */
+    public function toIntervalString(string $empty='?') : string {
+        return $this->convertDatesToIntervalString(
+            $this->getStartStr(), $this->getEndStr(), $empty
+        );
+    }
+    
+    
+    /**
+     * {@inheritDoc}
+     * @see \bg13\entities\models\IDateInterval::overlapsWith()
+     */
+    function overlapsWith(IDateInterval $interval) : bool {
+        return $this->doIntervalsOverlap($this, $interval);
     }
     
 }
