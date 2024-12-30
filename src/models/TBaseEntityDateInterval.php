@@ -1,6 +1,10 @@
 <?php
 
-namespace bg13\entities;
+namespace bg13\entities\models;
+
+use bg13\entities\components\TDates;
+
+use bg13\entities\TBaseEntity;
 
 
 /**
@@ -30,7 +34,7 @@ trait TBaseEntityDateInterval {
      * 'date_start'.
      *
      * {@inheritDoc}
-     * @see \bg13\entities\IDateInterval::getStartStr()
+     * @see \bg13\entities\models\IDateInterval::getStartStr()
      */
     public function getStartStr() {
         return $this->date_start;
@@ -42,7 +46,7 @@ trait TBaseEntityDateInterval {
      * 'date_end'.
      *
      * {@inheritDoc}
-     * @see \bg13\entities\IDateInterval::getEndStr()
+     * @see \bg13\entities\models\IDateInterval::getEndStr()
      */
     public function getEndStr() {
         return $this->date_end;
@@ -51,7 +55,7 @@ trait TBaseEntityDateInterval {
     
     /**
      * {@inheritDoc}
-     * @see \bg13\entities\IDateInterval::setStartStr()
+     * @see \bg13\entities\models\IDateInterval::setStartStr()
      */
     public function setStartStr($start) {
         $this->checkStartStr($start, $this);
@@ -61,7 +65,7 @@ trait TBaseEntityDateInterval {
     
     /**
      * {@inheritDoc}
-     * @see \bg13\entities\IDateInterval::setEndStr()
+     * @see \bg13\entities\models\IDateInterval::setEndStr()
      */
     public function setEndStr($end) {
         $this->checkEndStr($end, $this);
@@ -71,7 +75,7 @@ trait TBaseEntityDateInterval {
     
     /**
      * {@inheritDoc}
-     * @see \bg13\entities\IDateInterval::isCurrent()
+     * @see \bg13\entities\models\IDateInterval::isCurrent()
      */
     public function isCurrent() : bool {
         return $this->intervalIsCurrent($this);
@@ -80,7 +84,7 @@ trait TBaseEntityDateInterval {
     
     /**
      * {@inheritDoc}
-     * @see \bg13\entities\IDateInterval::contains()
+     * @see \bg13\entities\models\IDateInterval::contains()
      */
     public function contains(string $date) : bool {
         return $this->intervalContains($date);
@@ -89,7 +93,7 @@ trait TBaseEntityDateInterval {
     
     /**
      * {@inheritDoc}
-     * @see \bg13\entities\IDateInterval::containsInterval()
+     * @see \bg13\entities\models\IDateInterval::containsInterval()
      */
     public function containsInterval(IDateInterval $interval) : bool {
         return $this->intervalContainsInterval($this, $interval);

@@ -1,7 +1,8 @@
 <?php
 
-namespace bg13\entities;
+namespace bg13\entities\components;
 
+use bg13\entities\models\IDateInterval;
 use DateTime;
 use \InvalidArgumentException;
 
@@ -23,7 +24,7 @@ trait TDates {
      * @param IDateInterval $dateInterval The date interval that should be
      *                                    modified
      *
-     * @see \bg13\entities\IDateInterval::setStartStr()
+     * @see \bg13\entities\models\IDateInterval::setStartStr()
      */
     protected function checkStartStr($start, IDateInterval $dateInterval) {
         if(is_null($start)) {
@@ -57,7 +58,7 @@ trait TDates {
      * @param IDateInterval $dateInterval The date interval that should be
      *                                    modified
      *
-     * @see \bg13\entities\IDateInterval::setEndStr()
+     * @see \bg13\entities\models\IDateInterval::setEndStr()
      */
     protected function checkEndStr($end, IDateInterval $dateInterval) {
         if(is_null($end)) {

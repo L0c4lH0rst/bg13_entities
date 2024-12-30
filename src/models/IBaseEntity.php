@@ -1,6 +1,6 @@
 <?php
 
-namespace bg13\entities;
+namespace bg13\entities\models;
 
 
 /**
