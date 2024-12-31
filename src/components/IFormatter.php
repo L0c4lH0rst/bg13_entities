@@ -3,7 +3,7 @@ namespace bg13\entities\components;
 
 
 /**
- * Central formatter service
+ * Interface for a formating component.
  */
 interface IFormatter {
     
